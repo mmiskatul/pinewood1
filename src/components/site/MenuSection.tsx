@@ -93,16 +93,15 @@ export function MenuSection() {
                 key={item.name}
                 className="group flex flex-col overflow-hidden rounded-3xl border border-border bg-card shadow-sm transition-shadow hover:shadow-md"
               >
-                {(
-                  <img
-                    src={item.image ?? imageFor(item.category)}
-                    alt={item.name}
-                    width={1024}
-                    height={768}
-                    loading="lazy"
-                    className="h-44 w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                )}
+                <img
+                  src={item.image ?? imageFor(item.category)}
+                  alt={item.name}
+                  width={1024}
+                  height={768}
+                  loading="lazy"
+                  className="h-44 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+
                 <div className="flex flex-1 flex-col p-6">
                   <div className="flex items-start justify-between gap-3">
                     <h3 className="font-display text-lg font-semibold text-primary">
