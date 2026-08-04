@@ -5,6 +5,8 @@ import burger from "@/assets/dish-burger.jpg";
 import dessert from "@/assets/dish-dessert.jpg";
 import coffee from "@/assets/dish-coffee.jpg";
 import salad from "@/assets/dish-salad.jpg";
+import soup from "@/assets/dish-soup.jpg";
+import chinese from "@/assets/dish-chinese.jpg";
 
 export type MenuItem = {
   name: string;
@@ -30,9 +32,9 @@ export const categories = [
 const categoryImages: Record<string, string> = {
   "Pasta & Italian": pasta,
   "Steak & Grills": steak,
-  Soup: salad,
+  Soup: soup,
   Salad: salad,
-  "Chinese Platter": pasta,
+  "Chinese Platter": chinese,
   "Seafood Set Menu": seafood,
   "Burgers & Sandwiches": burger,
   Dessert: dessert,
