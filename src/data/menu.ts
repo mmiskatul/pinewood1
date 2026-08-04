@@ -27,6 +27,22 @@ export const categories = [
   "Coffee & Drinks",
 ] as const;
 
+const categoryImages: Record<string, string> = {
+  "Pasta & Italian": pasta,
+  "Steak & Grills": steak,
+  Soup: salad,
+  Salad: salad,
+  "Chinese Platter": pasta,
+  "Seafood Set Menu": seafood,
+  "Burgers & Sandwiches": burger,
+  Dessert: dessert,
+  "Coffee & Drinks": coffee,
+};
+
+export function imageFor(category: string) {
+  return categoryImages[category] ?? pasta;
+}
+
 export const menuItems: MenuItem[] = [
   {
     name: "Pinewood Signature Pasta",

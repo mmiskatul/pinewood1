@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
-import { categories, menuItems } from "@/data/menu";
+import { categories, menuItems, imageFor } from "@/data/menu";
 import { cn } from "@/lib/utils";
 
 export function MenuSection() {
@@ -93,9 +93,9 @@ export function MenuSection() {
                 key={item.name}
                 className="group flex flex-col overflow-hidden rounded-3xl border border-border bg-card shadow-sm transition-shadow hover:shadow-md"
               >
-                {item.image && (
+                {(
                   <img
-                    src={item.image}
+                    src={item.image ?? imageFor(item.category)}
                     alt={item.name}
                     width={1024}
                     height={768}
